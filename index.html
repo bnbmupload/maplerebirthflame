@@ -185,6 +185,8 @@ function calc()
 	var aa = successcount/runtime*100;
 	var bb = successcount2/runtime*100;
 	var cc = successcount/successcount2;
+	var dd = runtime/successcount;
+	var ee = runtime/successcount2;
 	if (both == 2)
 	{
 		text += "영환불 ";
@@ -202,7 +204,14 @@ function calc()
 		text += nwc(successcount2);
 		text += "회 등장하였으며 목표 이상의 추옵이 나올 확률은 ";
 		text += bb.toFixed(5);	
-		text += "% 입니다.<br>";
+		text += "% 입니다.<br><br>";
+		
+		text += "기대값으로 영환불 약 ";
+		text += dd.toFixed(0);
+		text += "개, 강환불 약 ";
+		text += ee.toFixed(0);
+		text += "개가 필요합니다.<br><br>";
+		
 		text += "따라서 원하시는 추옵 이상을 노릴 때 영환불이 강환불보다 ";
 		text += cc.toFixed(3);
 		text += "배 가치있으며 강환불 가격에 ";
@@ -218,7 +227,10 @@ function calc()
 		text += nwc(successcount);
 		text += "회 등장하였으며 목표 이상의 추옵이 나올 확률은 ";
 		text += aa.toFixed(5);	
-		text += "% 입니다.";
+		text += "% 입니다.<br>";
+		text += "기대값으로 환불 약 ";
+		text += dd.toFixed(0);
+		text += "개가 필요합니다.";
 	}
 	
 		
